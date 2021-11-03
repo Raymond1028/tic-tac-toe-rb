@@ -62,12 +62,13 @@ end
 #end
 
     def turn(board)
-        puts "Please enter 1-9:"
+        #puts "Please enter 1-9:"
         user_input = gets.strip
         int = input_to_index(user_input)
         if valid_move?(board, int)
             move(board,int,current_player(board))
             display_board(board)
+        
         else
             turn(board)
         end
@@ -97,12 +98,16 @@ end
 
         #puts board
         def full?(full_board)
-            if full_board == ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
-              true
-            else
-              false
+            full_board.each do |board| 
+              if board == " " 
+              return false
+              
+              end
+
             end
-          end
+             true
+        end
+          
 
           def draw?(board)
             # if (won?(draw_board) == false && full?(draw_board) == true)
@@ -148,11 +153,12 @@ end
                   return winner # return the win_combination indexes that won.
                 end
               end
-            false #don't use return, it stops the loop
+            return false #don't use return, it stops the loop
           end
 
           def play(board)
-            turn(board) until over?(board)
+            turn(board) until over?(board) 
+            #draw?(board)
            if won?(board) 
             puts "Congratulations #{winner(board)}!"
            elsif draw?(board) 
@@ -160,6 +166,11 @@ end
              
            end
           end
+            # if winning_combo = won?(board)
+            #   board[winning_combo.first]
+
+            # end
+        
 
           
           
