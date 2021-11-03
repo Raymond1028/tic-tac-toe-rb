@@ -57,6 +57,8 @@ end
         else
             turn(board)
         end
+        # change to check Github
+        
     end
         def turn_count(board1)
             count = 0
