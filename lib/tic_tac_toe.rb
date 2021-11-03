@@ -62,7 +62,7 @@ end
 #end
 
     def turn(board)
-        #puts "Please enter 1-9:"
+        puts "Please enter 1-9:"
         user_input = gets.strip
         int = input_to_index(user_input)
         if valid_move?(board, int)
@@ -121,7 +121,7 @@ end
           end
 
           def over?(board)
-            if won?(board) || full?(board)
+            if won?(board) || draw?(board)
               true
             else
               false
