@@ -5,6 +5,7 @@
 We'll build a two-player CLI version of Tic Tac Toe by defining a set of methods
 to encapsulate the game logic.
 
+
 ## Objectives
 
 1.  Build and use helper methods within the Tic Tac Toe application
