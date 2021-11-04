@@ -121,7 +121,8 @@ end
           end
 
           def over?(board)
-            if won?(board) || draw?(board)
+            if won?(board) || draw?(board) || full?(board) #must use draw? if full? used the return is inconclusive; try using
+              #3 conditionals. Tested. It works!
               true
             else
               false

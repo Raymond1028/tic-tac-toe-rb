@@ -63,7 +63,7 @@ describe './lib/tic_tac_toe.rb' do
     it 'checks if the game is draw after every turn' do
       board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
       allow($stdout).to receive(:puts)
-      allow(self).to receive(:gets).and_return("1", "2", "3")
+      allow(self).to receive(:gets).and_return("1", "2", "3","4","5","6","7","8","9")
 
       expect(self).to receive(:draw?).at_least(:twice).and_return(false, false, true)
 
